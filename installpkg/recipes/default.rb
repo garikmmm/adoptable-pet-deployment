@@ -8,5 +8,5 @@ end
 
 include_recipe 'apache2::service'
 service 'apache2' do
-  notifies :restart
+  notifies :restart, resources(:service => 'apache2')
 end

@@ -6,8 +6,5 @@ package 'php5-intl' do
   action :install
 end
 
-include_recipe 'apache2::service'
-
-execute 'apache2 service restart' do
-  notifies :restart, resources(:service => 'apache2')
+execute 'service apache2 restart' do
 end

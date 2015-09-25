@@ -5,3 +5,8 @@ end
 package 'php5-intl' do
   action :install
 end
+
+include_recipe 'apache2::service'
+service 'apache2' do
+  notifies :restart
+end

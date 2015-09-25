@@ -8,6 +8,6 @@ end
 
 include_recipe 'apache2::service'
 
-execute 'trigger apache2 service restart' do
+execute 'apache2 service restart' do
   notifies :restart, resources(:service => 'apache2')
 end
